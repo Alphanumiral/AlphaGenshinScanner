@@ -11,7 +11,7 @@ function createWindow () {
             contextIsolation: false
         }
     })
-    var python = require('child_process').spawn('D:\\miniforge3\\envs\\alphaScannerEnv\\python.exe', ['backend.py'])
+    var python = require('child_process').spawn('py', ['backend.py'])
     
     python.stdout.on('data', function (data) {
         console.log("data: ", data.toString('utf8'))
