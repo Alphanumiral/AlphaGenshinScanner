@@ -69,6 +69,9 @@ async function beginScan(achievementCheck, mergeCheck, mergeFile, characterCheck
     var fileName =  date.getFullYear() + "_" + date.getMonth() + "_" + date.getDate() + "_" + date.getHours() + "_" + date.getMinutes() + "_" + date.getSeconds()
     var fileDirectory = "./ScanData/"
 
+    if (!fs.existsSync(fileDirectory)){
+        fs.mkdirSync(fileDirectory);
+    }
     
     if (achievementCheck) {
         achExport = JSON.parse(JSON.stringify(exportJSON))
