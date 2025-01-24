@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script type = "text/javascript" src="main.js"></script>
+    </head>
+    <h1>Scan Settings</h1>
+    <input type="checkbox" id="Achievements" name="Achievements">
+    <label for="Achievements"> Achievements</label><br>
+
+    <input type="checkbox" id="AchievementMerge" name="AchievementMerge">
+    <label for="PaimonMoeData"> Merge achievement data into paimon.moe downloaded data</label>
+    <input type="file" id="PaimonMoeData" name="PaimonMoeData" accept=".json"><br><br>
+
+    <input type="checkbox" id="Characters" name="Characters">
+    <label for="Characters"> Characters</label><br>
+
+    <input type="checkbox" id="Weapons" name="Weapons">
+    <label for="Weapons"> Weapons</label><br>
+
+    <input type="checkbox" id="Artifacts" name="Artifacts">
+    <label for="Artifacts"> Artifacts</label><br>
+
+    <button type="button" id="beginScan" onclick="beginScan(
+        document.getElementById('Achievements').checked, 
+        document.getElementById('AchievementMerge').checked, 
+        document.getElementById('PaimonMoeData').files[0], 
+        document.getElementById('Characters').checked, 
+        document.getElementById('Weapons').checked, 
+        document.getElementById('Artifacts').checked
+        )">Begin Scan
+    </button>
+</html>
